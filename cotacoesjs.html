@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Desenvolvimento web</title>
+		<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> 
+	</head>
+	<body>
+		<h2>Cotacoes</h2>
+		<h3>Valor Dolar hoje:</h3>
+		<label id="moedadolar">-</label>
+		<h3>Valor Euro hoje:</h3>
+		<label id="moedaeuro">-</label>
+		<br></br>
+		<a href="index.php">Voltar</a>
+
+		<script>
+
+			var url = "http://ionicappsapi.herokuapp.com/api/v1/moedas";
+			function consumir() {
+			  //console.log(this.response);
+			  //console.log(this.response.moedas);
+			  var dolar = this.response.moedas[0].valor;
+			  var euro = this.response.moedas[3].valor;
+			  //console.log("teste " + dolar + " " + euro);
+			  document.getElementById("moedadolar").innerHTML = dolar;
+			  document.getElementById("moedaeuro").innerHTML = euro;
+			};
+
+			var newRequest = new XMLHttpRequest();
+			newRequest.onload = consumir;
+			newRequest.responseType = "json";
+			newRequest.open("get", url, true);
+			newRequest.send(null);		
+		</script>
+	</body>
+</html>

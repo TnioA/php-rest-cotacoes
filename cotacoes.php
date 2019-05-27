@@ -3,7 +3,7 @@
 	function cotacoes(){
 
 		$html_font = file_get_contents('https://www.msn.com/pt-br/dinheiro/cotacao-do-dolar');
-		$html_bitcoin = file_get_contents('https://financeone.com.br/moedas/cotacoes-do-real-e-outras-moedas/');
+		//$html_bitcoin = file_get_contents('https://financeone.com.br/moedas/cotacoes-do-real-e-outras-moedas/');
 
 
 		$get_box1 = explode('<div class="mjrcurrncsrow mjcurrncs-data">', $html_font);

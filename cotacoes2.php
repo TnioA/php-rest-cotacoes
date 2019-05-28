@@ -73,7 +73,7 @@
 			}
 
 			array_push($moedas['moedas'], array(
-				'bandeira' => 'http://restcotacoes.herokuapp.com/icons/'.$get_flag.'.ico',
+				'bandeira' => 'http://restcotacoes.herokuapp.com/icons/'.$get_flag.'.svg',
 				'nome' => $get_name[0],
 				'valor' => 'R$'.number_format((float)$get_value[1], 2, '.', '')
 			));

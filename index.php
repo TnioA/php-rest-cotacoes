@@ -1,3 +1,3 @@
 <?php
-	include_once("cotacoes.php");
+	include_once("cotacoes2.php");
 ?>

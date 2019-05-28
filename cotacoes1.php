@@ -1,5 +1,6 @@
 <?php
-	
+	ini_set('default_charset','UTF-8');
+
 	function cotacoes(){
 		
 		$html_font = file_get_contents('https://financeone.com.br');

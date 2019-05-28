@@ -41,7 +41,7 @@
 			if(strpos($get_name[0], 'Reino Unido')){
 				$get_flag = 'united_kingdom';
 			}
-			if(strpos($get_name[0], 'México')){
+			if(strpos($get_name[0], 'xico')){
 				$get_flag = 'mexico';
 			}
 			if(strpos($get_name[0], 'Chile')){
@@ -56,16 +56,16 @@
 			if(strpos($get_name[0], 'China')){
 				$get_flag = 'china';
 			}
-			if(strpos($get_name[0], 'Suíça')){
+			if(strpos($get_name[0], 'ça)')){
 				$get_flag = 'switzerland';
 			}
-			if(strpos($get_name[0], 'África do Sul')){
+			if(strpos($get_name[0], 'frica do Sul')){
 				$get_flag = 'south_africa';
 			}
-			if(strpos($get_name[0], 'Austrália')){
+			if(strpos($get_name[0], '(Austr')){
 				$get_flag = 'australia';
 			}
-			if(strpos($get_name[0], 'Canadá')){
+			if(strpos($get_name[0], 'Canad')){
 				$get_flag = 'canada';
 			}
 			if(strpos($get_name[0], 'Cingapura')){

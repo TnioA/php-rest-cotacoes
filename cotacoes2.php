@@ -50,13 +50,13 @@
 			if(strpos($get_name[0], 'Uruguai')){
 				$get_flag = 'uruguay';
 			}
-			if(strpos($get_name[0], 'Japão')){
+			if(strpos($get_name[0], 'Jap')){
 				$get_flag = 'japan';
 			}
 			if(strpos($get_name[0], 'China')){
 				$get_flag = 'china';
 			}
-			if(strpos($get_name[0], 'ça)')){
+			if(strpos($get_name[0], '(Su')){
 				$get_flag = 'switzerland';
 			}
 			if(strpos($get_name[0], 'frica do Sul')){

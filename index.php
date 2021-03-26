@@ -13,7 +13,9 @@
                 //any route validation
                 if(!isset($_GET['url']))
                     throw new Exception(App\Enum\ErrorMessage::INVALID_API_ROUTE);
-
+                
+                var_dump($_GET['url']);
+                
                 $fullUrl = $_GET['url'];               
                 $urlItens = explode('/', $fullUrl);
 

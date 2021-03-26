@@ -26,17 +26,15 @@
                 $controller = 'App\Controller\\'. ucfirst(isset($urlItens[0])? $urlItens[0] : '').'Controller';
                 array_shift($urlItens);
                 
-                var_dump($controller);
-                
                 $function = isset($urlItens[0])? $urlItens[0] : '';
                 array_shift($urlItens);
     
                 if(!file_exists($controller.'.php'))
+                    var_dump('deu merda aqui --- '. $controller.'.php');
                     throw new Exception(App\Enum\ErrorMessage::INVALID_API_ROUTE);
                 
+                var_dump('ve se chega aqui');
                 $method = $_SERVER['REQUEST_METHOD'];
-                
-                var_dump($method);
 
                 //route arguments validation
                 App\Annotation\Route::CheckRouteAndMethod(new $controller(), $function, $method);

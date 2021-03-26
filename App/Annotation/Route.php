@@ -6,7 +6,7 @@
     #[Attribute]
     class Route
     {
-        function __construct(public string $url, public array $methods) { }
+        public function __construct(string $url, array $methods) { }
 
         public static function CheckRouteAndMethod(object $objectToValid, string $route, string $method)
         {

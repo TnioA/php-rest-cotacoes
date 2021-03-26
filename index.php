@@ -29,8 +29,8 @@
                 $function = isset($urlItens[0])? $urlItens[0] : '';
                 array_shift($urlItens);
                 
-                var_dump(file_exists(__DIR__.'\\'. $controller.'.php'));
-                if(!file_exists(__DIR__.'\\'. $controller.'.php'))
+                var_dump(file_exists(str_replace('\\', '//', __DIR__.'\\'. $controller.'.php')));
+                if(!file_exists(str_replace('\\', '//', __DIR__.'\\'. $controller.'.php')))
                     var_dump('deu merda aqui --- '. __DIR__.'\\'. $controller.'.php');
                     throw new Exception(App\Enum\ErrorMessage::INVALID_API_ROUTE);
                 

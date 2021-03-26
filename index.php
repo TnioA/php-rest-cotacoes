@@ -33,6 +33,8 @@
                     throw new Exception(App\Enum\ErrorMessage::INVALID_API_ROUTE);
                 
                 $method = $_SERVER['REQUEST_METHOD'];
+                
+                var_dump($method);
 
                 //route arguments validation
                 App\Annotation\Route::CheckRouteAndMethod(new $controller(), $function, $method);

@@ -29,7 +29,7 @@
                 $function = isset($urlItens[0])? $urlItens[0] : '';
                 array_shift($urlItens);
     
-                if(!file_exists($controller.'.php'))
+                if(!file_exists('\'. $controller.'.php'))
                     var_dump('deu merda aqui --- '. $controller.'.php');
                     throw new Exception(App\Enum\ErrorMessage::INVALID_API_ROUTE);
                 

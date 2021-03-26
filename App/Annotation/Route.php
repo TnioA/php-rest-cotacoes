@@ -1,6 +1,8 @@
 <?php
     namespace App\Annotation;
 
+    use App\Enum\ErrorMessage;
+
     #[Attribute]
     class Route
     {
@@ -10,7 +12,7 @@
         {
             $reflectionClass = new \ReflectionClass($objectToValid::class);
             $valid = false;
-            
+
             foreach ($reflectionClass->getMethods() as $endPoint) {
                 $methodName = $endPoint->getName();
                 $attributes = $endPoint->getAttributes(self::class);
@@ -26,7 +28,7 @@
             }
 
             if(!$valid){
-                throw new \Exception("Can't find a route that satisfies this request!");
+                throw new \Exception(sprintf(ErrorMessage::INVALID_REQUEST_METHOD, ucfirst($route), $method));
             }
         }
     }

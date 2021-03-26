@@ -32,7 +32,6 @@
                 if(!file_exists(str_replace('\\', '//', __DIR__.'\\'. $controller.'.php')))
                     throw new Exception(App\Enum\ErrorMessage::INVALID_API_ROUTE);
                 
-                var_dump('ve se chega aqui');
                 $method = $_SERVER['REQUEST_METHOD'];
 
                 //route arguments validation

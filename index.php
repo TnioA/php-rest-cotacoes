@@ -14,8 +14,6 @@
                 if(!isset($_GET['url']))
                     throw new Exception(App\Enum\ErrorMessage::INVALID_API_ROUTE);
                 
-                var_dump($_GET['url']);
-                
                 $fullUrl = $_GET['url'];               
                 $urlItens = explode('/', $fullUrl);
 
@@ -27,6 +25,8 @@
                 
                 $controller = 'App\Controller\\'. ucfirst(isset($urlItens[0])? $urlItens[0] : '').'Controller';
                 array_shift($urlItens);
+                
+                var_dump($controller);
                 
                 $function = isset($urlItens[0])? $urlItens[0] : '';
                 array_shift($urlItens);

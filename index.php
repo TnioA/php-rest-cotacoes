@@ -30,7 +30,7 @@
                 array_shift($urlItens);
     
                 if(!file_exists(__DIR__.'\\'. $controller.'.php'))
-                    var_dump('deu merda aqui --- '. $controller.'.php');
+                    var_dump('deu merda aqui --- '. __DIR__.'\\'. $controller.'.php');
                     throw new Exception(App\Enum\ErrorMessage::INVALID_API_ROUTE);
                 
                 var_dump('ve se chega aqui');

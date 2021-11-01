@@ -17,7 +17,6 @@
         #[Route("getall", ["GET"])]
         public function GetAll()
         {
-            
             return $this->_service->GetAll();
         }
 
@@ -33,7 +32,6 @@
             $_POST = json_decode(file_get_contents("php://input"), true);
             
             return new CoinModel($_POST["Name"], $_POST["Flag"], $_POST["Value"]);
-
         }
 
         #[Route("getallfromdb", ["GET"])]

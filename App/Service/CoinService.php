@@ -124,10 +124,16 @@
                 if(strpos($get_name[0], 'Cingapura')){
                     $get_flag = 'singapore';
                 }
+
+                // get base64 image
+                $path = getcwd().'/Assets/Icons/'.$get_flag.'.svg';
+                $type = pathinfo($path, PATHINFO_EXTENSION);
+                $data = file_get_contents($path);
+                $base64 = 'data:image/' . $type . ';base64,' . base64_encode($data);
     
                 array_push($moedas, 
                 new CoinModel($get_name[0], 
-                'http://restcotacoes.herokuapp.com/assets/icons/'.$get_flag.'.svg', 
+                $base64, 
                 'R$'.number_format((float)$get_value[1], 2, '.', '')));
             }
     

@@ -1,4 +1,5 @@
 <?php
+    header("Access-Control-Allow-Origin: *");
     header('Content-Type: application/json');
     ini_set('default_charset','UTF-8');
 
